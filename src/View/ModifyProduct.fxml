@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="modifyProductScreen" prefHeight="584.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ModifyProductController">
+    <children>
+        <Text layoutX="50.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+        <Text layoutX="50.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+        <Text layoutX="50.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+        <Text layoutX="50.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+        <Text layoutX="50.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+        <TextField layoutX="112.0" layoutY="193.0" promptText="Enter Name" />
+        <TextField layoutX="112.0" layoutY="232.0" prefHeight="26.0" prefWidth="96.0" promptText="Enter Inv" />
+        <TextField layoutX="112.0" layoutY="272.0" prefHeight="26.0" prefWidth="96.0" promptText="Enter Price" />
+        <TextField layoutX="112.0" layoutY="311.0" prefHeight="26.0" prefWidth="96.0" promptText="Enter Max" />
+        <TextField layoutX="273.0" layoutY="312.0" prefHeight="26.0" prefWidth="81.0" promptText="Enter Min" />
+        <Button layoutX="719.0" layoutY="520.0" mnemonicParsing="false" text="Save" />
+        <Button layoutX="776.0" layoutY="520.0" mnemonicParsing="false" onAction="#cancelModifyProduct" text="Cancel" />
+        <Text layoutX="230.0" layoutY="329.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+        <TextField layoutX="112.0" layoutY="154.0" promptText="Auto Gen - Disabled" />
+        <Text layoutX="39.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Modify Product" />
+        <TableView fx:id="modifyProductAddTable" layoutX="431.0" layoutY="73.0" prefHeight="152.0" prefWidth="398.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Part ID" />
+                <TableColumn prefWidth="75.0" text="Part Name" />
+                <TableColumn prefWidth="103.20001220703125" text="Inventory Level" />
+                <TableColumn prefWidth="143.19998779296873" text="Price/Cost per Unit" />
+            </columns>
+        </TableView>
+        <TableView fx:id="modifyProductRemoveTable" layoutX="431.0" layoutY="277.0" prefHeight="152.0" prefWidth="398.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Part ID" />
+                <TableColumn prefWidth="75.0" text="Part Name" />
+                <TableColumn prefWidth="99.79998779296875" text="Inventory Level" />
+                <TableColumn prefWidth="148.2000732421875" text="Price/Cost per Unit" />
+            </columns>
+        </TableView>
+        <TextField layoutX="647.0" layoutY="36.0" prefHeight="26.0" prefWidth="184.0" promptText="Search by Part ID or Name" />
+        <Button layoutX="790.0" layoutY="232.0" mnemonicParsing="false" text="Add" />
+        <Button layoutX="687.0" layoutY="440.0" mnemonicParsing="false" text="Remove Associated Part" />
+    </children>
+</AnchorPane>

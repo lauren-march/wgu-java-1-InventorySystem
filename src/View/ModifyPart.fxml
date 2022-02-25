@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="modifyPartScreen" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ModifyPartController">
+    <children>
+        <Text layoutX="35.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Modify Part" />
+        <RadioButton fx:id="inHouseModifyRadio" layoutX="193.0" layoutY="41.0" mnemonicParsing="false" onAction="#modifyInHouseRadio" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="modifyToggle" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="outsourcedModifyRadio" layoutX="351.0" layoutY="42.0" mnemonicParsing="false" onAction="#modifyOutsourcedRadio" text="Outsourced" toggleGroup="$modifyToggle" />
+        <Text layoutX="60.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+        <Text layoutX="60.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+        <Text layoutX="60.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+        <Text layoutX="60.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" />
+        <Text layoutX="60.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+        <Text fx:id="machineIDDefault" layoutX="60.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID" />
+        <Text layoutX="362.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+        <TextField layoutX="141.0" layoutY="97.0" prefHeight="16.0" prefWidth="104.0" />
+        <TextField layoutX="141.0" layoutY="142.0" />
+        <TextField layoutX="141.0" layoutY="187.0" />
+        <TextField layoutX="141.0" layoutY="232.0" />
+        <TextField layoutX="141.0" layoutY="277.0" />
+        <TextField fx:id="machineIdTextField" layoutX="160.0" layoutY="323.0" />
+        <TextField layoutX="413.0" layoutY="278.0" promptText="Enter Min" />
+        <Button layoutX="367.0" layoutY="348.0" mnemonicParsing="false" text="Save" />
+        <Button layoutX="435.0" layoutY="348.0" mnemonicParsing="false" onAction="#cancelModifyPart" text="Cancel" />
+    </children>
+</AnchorPane>
